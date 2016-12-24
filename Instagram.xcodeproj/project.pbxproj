@@ -20,6 +20,8 @@
 		4CC7A7601E0EA71E00D092FA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75E1E0EA71E00D092FA /* Quick.framework */; };
 		4CC7A7631E0EA7EB00D092FA /* SignUpRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7A7621E0EA7EB00D092FA /* SignUpRealmStore.swift */; };
 		4CC7A7661E0EA9F200D092FA /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7A7651E0EA9F200D092FA /* SignUp.swift */; };
+		4CC7A7691E0EAAC100D092FA /* SignUpRealmStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7A7681E0EAAC100D092FA /* SignUpRealmStoreSpec.swift */; };
+		4CC7A76B1E0EAE3000D092FA /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7A76A1E0EAE3000D092FA /* RealmUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		4CC7A75E1E0EA71E00D092FA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4CC7A7621E0EA7EB00D092FA /* SignUpRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpRealmStore.swift; path = Services/SignUpRealmStore.swift; sourceTree = "<group>"; };
 		4CC7A7651E0EA9F200D092FA /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUp.swift; path = Models/SignUp.swift; sourceTree = "<group>"; };
+		4CC7A7681E0EAAC100D092FA /* SignUpRealmStoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpRealmStoreSpec.swift; path = Services/SignUpRealmStoreSpec.swift; sourceTree = "<group>"; };
+		4CC7A76A1E0EAE3000D092FA /* RealmUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmUser.swift; path = Models/RealmUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */,
+				4CC7A7671E0EAAAB00D092FA /* Services */,
 				4C3A66C31E0E99B000A9FE5A /* Info.plist */,
 			);
 			path = InstagramTests;
@@ -167,8 +172,17 @@
 			isa = PBXGroup;
 			children = (
 				4CC7A7651E0EA9F200D092FA /* SignUp.swift */,
+				4CC7A76A1E0EAE3000D092FA /* RealmUser.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		4CC7A7671E0EAAAB00D092FA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4CC7A7681E0EAAC100D092FA /* SignUpRealmStoreSpec.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +356,7 @@
 			files = (
 				4C3A66AF1E0E99B000A9FE5A /* ViewController.swift in Sources */,
 				4CC7A7661E0EA9F200D092FA /* SignUp.swift in Sources */,
+				4CC7A76B1E0EAE3000D092FA /* RealmUser.swift in Sources */,
 				4CC7A7631E0EA7EB00D092FA /* SignUpRealmStore.swift in Sources */,
 				4C3A66AD1E0E99B000A9FE5A /* AppDelegate.swift in Sources */,
 			);
@@ -351,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC7A7691E0EAAC100D092FA /* SignUpRealmStoreSpec.swift in Sources */,
 				4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

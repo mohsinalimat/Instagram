@@ -135,6 +135,7 @@
 				4C3A66A51E0E99B000A9FE5A /* Sources */,
 				4C3A66A61E0E99B000A9FE5A /* Frameworks */,
 				4C3A66A71E0E99B000A9FE5A /* Resources */,
+				4CD00A8C1E0E9F900036CC14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -152,6 +153,7 @@
 				4C3A66B91E0E99B000A9FE5A /* Sources */,
 				4C3A66BA1E0E99B000A9FE5A /* Frameworks */,
 				4C3A66BB1E0E99B000A9FE5A /* Resources */,
+				4CD00A8D1E0E9FD90036CC14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +255,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CD00A8C1E0E9F900036CC14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		4CD00A8D1E0E9FD90036CC14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C3A66A51E0E99B000A9FE5A /* Sources */ = {
@@ -503,6 +540,7 @@
 				4C3A66D31E0E99B000A9FE5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C3A66D41E0E99B000A9FE5A /* Build configuration list for PBXNativeTarget "InstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +549,7 @@
 				4C3A66D61E0E99B000A9FE5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C3A66D71E0E99B000A9FE5A /* Build configuration list for PBXNativeTarget "InstagramUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +558,7 @@
 				4C3A66D91E0E99B000A9FE5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

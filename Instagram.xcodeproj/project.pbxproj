@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		4C3A66AD1E0E99B000A9FE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66AC1E0E99B000A9FE5A /* AppDelegate.swift */; };
 		4C3A66AF1E0E99B000A9FE5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66AE1E0E99B000A9FE5A /* ViewController.swift */; };
-		4C3A66B21E0E99B000A9FE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3A66B01E0E99B000A9FE5A /* Main.storyboard */; };
 		4C3A66B41E0E99B000A9FE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3A66B31E0E99B000A9FE5A /* Assets.xcassets */; };
 		4C3A66B71E0E99B000A9FE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3A66B51E0E99B000A9FE5A /* LaunchScreen.storyboard */; };
 		4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */; };
 		4C3A66CD1E0E99B000A9FE5A /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */; };
 		4C49F9751E0FADF3001E3BBE /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9741E0FADF3001E3BBE /* UITestCase.swift */; };
 		4C49F9781E0FAE31001E3BBE /* SignUpSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */; };
+		4C49F97B1E0FAF0F001E3BBE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */; };
+		4C49F9821E0FAF6A001E3BBE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */; };
+		4C49F9831E0FAF6A001E3BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49F9811E0FAF6A001E3BBE /* Main.storyboard */; };
 		4CC7A75B1E0EA6B700D092FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A7591E0EA6B700D092FA /* Realm.framework */; };
 		4CC7A75C1E0EA6B700D092FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */; };
 		4CC7A75F1E0EA71E00D092FA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75D1E0EA71E00D092FA /* Nimble.framework */; };
@@ -47,7 +49,6 @@
 		4C3A66A91E0E99B000A9FE5A /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3A66AC1E0E99B000A9FE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3A66AE1E0E99B000A9FE5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C3A66B11E0E99B000A9FE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C3A66B31E0E99B000A9FE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C3A66B61E0E99B000A9FE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C3A66B81E0E99B000A9FE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		4C3A66CE1E0E99B000A9FE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C49F9741E0FADF3001E3BBE /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpSceneTests.swift; path = Scenes/SignUpSceneTests.swift; sourceTree = "<group>"; };
+		4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Scenes/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
+		4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = Storyboards/SignUp.storyboard; sourceTree = "<group>"; };
+		4C49F9811E0FAF6A001E3BBE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		4CC7A7591E0EA6B700D092FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		4CC7A75D1E0EA71E00D092FA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -122,11 +126,12 @@
 		4C3A66AB1E0E99B000A9FE5A /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				4C49F97D1E0FAF1B001E3BBE /* Storyboards */,
+				4C49F9791E0FAEE0001E3BBE /* Scenes */,
 				4CC7A7641E0EA9E100D092FA /* Models */,
 				4CC7A7611E0EA7B100D092FA /* Services */,
 				4C3A66AC1E0E99B000A9FE5A /* AppDelegate.swift */,
 				4C3A66AE1E0E99B000A9FE5A /* ViewController.swift */,
-				4C3A66B01E0E99B000A9FE5A /* Main.storyboard */,
 				4C3A66B31E0E99B000A9FE5A /* Assets.xcassets */,
 				4C3A66B51E0E99B000A9FE5A /* LaunchScreen.storyboard */,
 				4C3A66B81E0E99B000A9FE5A /* Info.plist */,
@@ -161,6 +166,31 @@
 				4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		4C49F9791E0FAEE0001E3BBE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C49F97C1E0FAF12001E3BBE /* SignUp */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		4C49F97C1E0FAF12001E3BBE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		4C49F97D1E0FAF1B001E3BBE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */,
+				4C49F9811E0FAF6A001E3BBE /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		4CC7A7581E0EA6B700D092FA /* Frameworks */ = {
@@ -309,8 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3A66B71E0E99B000A9FE5A /* LaunchScreen.storyboard in Resources */,
+				4C49F9831E0FAF6A001E3BBE /* Main.storyboard in Resources */,
 				4C3A66B41E0E99B000A9FE5A /* Assets.xcassets in Resources */,
-				4C3A66B21E0E99B000A9FE5A /* Main.storyboard in Resources */,
+				4C49F9821E0FAF6A001E3BBE /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C49F97B1E0FAF0F001E3BBE /* SignUpViewController.swift in Sources */,
 				4C3A66AF1E0E99B000A9FE5A /* ViewController.swift in Sources */,
 				4CC7A7661E0EA9F200D092FA /* SignUp.swift in Sources */,
 				4CC7A76B1E0EAE3000D092FA /* RealmUser.swift in Sources */,
@@ -411,14 +443,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C3A66B01E0E99B000A9FE5A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C3A66B11E0E99B000A9FE5A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C3A66B51E0E99B000A9FE5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

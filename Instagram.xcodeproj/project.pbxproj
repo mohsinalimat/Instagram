@@ -14,6 +14,8 @@
 		4C3A66B71E0E99B000A9FE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3A66B51E0E99B000A9FE5A /* LaunchScreen.storyboard */; };
 		4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */; };
 		4C3A66CD1E0E99B000A9FE5A /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */; };
+		4C49F9751E0FADF3001E3BBE /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9741E0FADF3001E3BBE /* UITestCase.swift */; };
+		4C49F9781E0FAE31001E3BBE /* SignUpSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */; };
 		4CC7A75B1E0EA6B700D092FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A7591E0EA6B700D092FA /* Realm.framework */; };
 		4CC7A75C1E0EA6B700D092FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */; };
 		4CC7A75F1E0EA71E00D092FA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75D1E0EA71E00D092FA /* Nimble.framework */; };
@@ -55,6 +57,8 @@
 		4C3A66C81E0E99B000A9FE5A /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		4C3A66CE1E0E99B000A9FE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C49F9741E0FADF3001E3BBE /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpSceneTests.swift; path = Scenes/SignUpSceneTests.swift; sourceTree = "<group>"; };
 		4CC7A7591E0EA6B700D092FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		4CC7A75D1E0EA71E00D092FA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -144,9 +148,19 @@
 			isa = PBXGroup;
 			children = (
 				4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */,
+				4C49F9741E0FADF3001E3BBE /* UITestCase.swift */,
+				4C49F9761E0FAE14001E3BBE /* Scenes */,
 				4C3A66CE1E0E99B000A9FE5A /* Info.plist */,
 			);
 			path = InstagramUITests;
+			sourceTree = "<group>";
+		};
+		4C49F9761E0FAE14001E3BBE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		4CC7A7581E0EA6B700D092FA /* Frameworks */ = {
@@ -375,7 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C49F9781E0FAE31001E3BBE /* SignUpSceneTests.swift in Sources */,
 				4C3A66CD1E0E99B000A9FE5A /* InstagramUITests.swift in Sources */,
+				4C49F9751E0FADF3001E3BBE /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

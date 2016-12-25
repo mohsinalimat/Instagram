@@ -38,7 +38,7 @@ class SignUpRealmStoreSpec: QuickSpec {
             
             context("when signUp") {
                 beforeEach {
-                    sut.signUp(SignUp.Request(email: "cruzdiary@gmail.com", userName: "cruz", password: "password"))
+                    sut.signUp(SignUp.Request.seed)
                 }
                 
                 it("numberOfUsers should be increased") {
@@ -47,7 +47,7 @@ class SignUpRealmStoreSpec: QuickSpec {
                 
                 context("when signUp using same Email") {
                     beforeEach {
-                        sut.signUp(SignUp.Request(email: "cruzdiary@gmail.com", userName: "cruz", password: "password"))
+                        sut.signUp(SignUp.Request.seed)
                     }
                     
                     it("numberOfUsers should be not changed") {
@@ -57,4 +57,8 @@ class SignUpRealmStoreSpec: QuickSpec {
             }
         }
     }
+}
+
+extension SignUp.Request {
+    static let seed = SignUp.Request(email: "cruzdiary@gmail.com", userName: "cruz", password: "password")
 }

@@ -17,15 +17,22 @@ protocol SignUpAPI {
 class SignUpRealmStore: SignUpAPI {
     
     func signUp(_ request: SignUp.Request) {
-        let realm = try! Realm()
-        
         let newUser = RealmUser()
+        newUser.email = request.email
         newUser.userName = request.userName
         newUser.password = request.password
-        newUser.email = request.email
         
-        try! realm.write {
-            realm.add(newUser)
+        do {
+            let realm = try Realm()
+            if realm.object(ofType: RealmUser.self, forPrimaryKey: newUser.email) == nil {
+                try realm.write {
+                    realm.add(newUser)
+                }
+            } else {
+                throw NSError(domain: "Can't set primary key property 'email' to existing value '\(newUser.email)'", code: 406, userInfo: [:])
+            }
+        } catch let error as NSError {
+            print(error)
         }
     }
 }

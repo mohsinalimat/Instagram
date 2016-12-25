@@ -10,8 +10,8 @@ import UIKit
 
 struct SignUp {
     struct Request {
-        var userName: String
         var email: String
+        var userName: String
         var password: String
     }
     

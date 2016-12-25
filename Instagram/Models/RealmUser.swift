@@ -11,7 +11,11 @@ import UIKit
 import RealmSwift
 
 class RealmUser: Object {
-    dynamic var userName = ""
     dynamic var email = ""
+    dynamic var userName = ""
     dynamic var password = ""
+    
+    override static func primaryKey() -> String? {
+        return "email"
+    }
 }

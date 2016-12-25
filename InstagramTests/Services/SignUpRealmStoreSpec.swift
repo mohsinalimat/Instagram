@@ -23,6 +23,9 @@ class SignUpRealmStoreSpec: QuickSpec {
         beforeEach {
             Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
             realm = try! Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
             sut = SignUpRealmStore()
         }
         
@@ -35,12 +38,21 @@ class SignUpRealmStoreSpec: QuickSpec {
             
             context("when signUp") {
                 beforeEach {
-                    sut.signUp(SignUp.Request(userName: "cruz", email: "cruzdiary@gmail.com", password: "password"))
+                    sut.signUp(SignUp.Request(email: "cruzdiary@gmail.com", userName: "cruz", password: "password"))
                 }
                 
                 it("numberOfUsers should be increased") {
-                    let numberOfUsers = realm.objects(RealmUser.self).count
-                    expect(numberOfUsers).to(equal(expectedNumberOfUsers))
+                    expect(realm.objects(RealmUser.self).count).to(equal(expectedNumberOfUsers))
+                }
+                
+                context("when signUp using same Email") {
+                    beforeEach {
+                        sut.signUp(SignUp.Request(email: "cruzdiary@gmail.com", userName: "cruz", password: "password"))
+                    }
+                    
+                    it("numberOfUsers should be not changed") {
+                        expect(realm.objects(RealmUser.self).count).to(equal(expectedNumberOfUsers))
+                    }
                 }
             }
         }

@@ -9,7 +9,8 @@
 import XCTest
 
 class SignUpSceneTests: UITestCase {
-    func testUIElement() {
-        XCTAssertEqual(app.textFields.count, 3, "email, userName, password")
+    func testUIElements() {
+        XCTAssertEqual(app.textFields.count, 3, "email, userName, password should be exists")
+        XCTAssertTrue(app.buttons["SignUpButton"].exists)
     }
 }

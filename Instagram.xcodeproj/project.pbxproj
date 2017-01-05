@@ -24,6 +24,7 @@
 		4CAF8AD01E0FC15100ABFE0D /* GSMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8ACF1E0FC15100ABFE0D /* GSMessages.framework */; };
 		4CAF8AD21E0FC15700ABFE0D /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8AD11E0FC15700ABFE0D /* RxDataSources.framework */; };
 		4CAF8AD41E0FC15C00ABFE0D /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8AD31E0FC15C00ABFE0D /* RxOptional.framework */; };
+		4CAF8AD61E0FC52A00ABFE0D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF8AD51E0FC52A00ABFE0D /* SignUpViewModel.swift */; };
 		4CC7A75B1E0EA6B700D092FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A7591E0EA6B700D092FA /* Realm.framework */; };
 		4CC7A75C1E0EA6B700D092FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */; };
 		4CC7A75F1E0EA71E00D092FA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7A75D1E0EA71E00D092FA /* Nimble.framework */; };
@@ -75,6 +76,7 @@
 		4CAF8ACF1E0FC15100ABFE0D /* GSMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GSMessages.framework; path = Carthage/Build/iOS/GSMessages.framework; sourceTree = "<group>"; };
 		4CAF8AD11E0FC15700ABFE0D /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		4CAF8AD31E0FC15C00ABFE0D /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		4CAF8AD51E0FC52A00ABFE0D /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = Scenes/SignUp/SignUpViewModel.swift; sourceTree = "<group>"; };
 		4CC7A7591E0EA6B700D092FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		4CC7A75A1E0EA6B700D092FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		4CC7A75D1E0EA71E00D092FA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */,
+				4CAF8AD51E0FC52A00ABFE0D /* SignUpViewModel.swift */,
 			);
 			name = SignUp;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				4CC7A76B1E0EAE3000D092FA /* RealmUser.swift in Sources */,
 				4CC7A7631E0EA7EB00D092FA /* SignUpRealmStore.swift in Sources */,
 				4C3A66AD1E0E99B000A9FE5A /* AppDelegate.swift in Sources */,
+				4CAF8AD61E0FC52A00ABFE0D /* SignUpViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

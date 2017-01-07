@@ -35,7 +35,6 @@ class SignUpViewModel: SignUpViewModelType {
     private let disposeBag = DisposeBag()
     
     init() {
-        
         let emailValidation = Observable.from([true])
         let passwordValidation = Observable.from([false])
         let userNameValidation = Observable.from([true])

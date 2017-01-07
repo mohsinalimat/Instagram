@@ -23,10 +23,14 @@ class SignUpRealmStoreSpec: QuickSpec {
         beforeEach {
             Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
             realm = try! Realm()
+            
+            sut = SignUpRealmStore()
+        }
+        
+        afterEach {
             try! realm.write {
                 realm.deleteAll()
             }
-            sut = SignUpRealmStore()
         }
         
         describe("SignUpRealmStore") {

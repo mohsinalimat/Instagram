@@ -30,7 +30,7 @@ protocol SignUpViewModelType {
     
     //OUTPUT
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel> { get }
-    var signedUp: Driver<Bool> { get }
+    var signedUp: Driver<Void> { get }
 }
 
 class SignUpViewModel: SignUpViewModelType {
@@ -45,7 +45,7 @@ class SignUpViewModel: SignUpViewModelType {
     //MARK: Output
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel>
     
-    var signedUp: Driver<Bool>
+    var signedUp: Driver<Void>
     
     private let disposeBag = DisposeBag()
     
@@ -54,9 +54,13 @@ class SignUpViewModel: SignUpViewModelType {
         self.userNameChanged = Variable("")
         self.passwordChanged = Variable("")
         
-        let emailValidation = emailChanged.asDriver().filterNil().map { $0.isEmail }.asObservable()
-        let userNameValidation = userNameChanged.asDriver().filterNil().map { $0.isUserName }.asObservable()
-        let passwordValidation = passwordChanged.asDriver().filterNil().map { $0.isPassword }.asObservable()
+        let emailObservable = emailChanged.asDriver().filterNil().asObservable()
+        let userNameObservable = userNameChanged.asDriver().filterNil().asObservable()
+        let passwordObservable = passwordChanged.asDriver().filterNil().asObservable()
+        
+        let emailValidation = emailObservable.map { $0.isEmail }.asObservable()
+        let userNameValidation = userNameObservable.map { $0.isUserName }.asObservable()
+        let passwordValidation = passwordObservable.map { $0.isPassword }.asObservable()
         
         let validObservable = Observable.combineLatest(emailValidation, passwordValidation, userNameValidation) {
             return $0.0 && $0.1 && $0.2
@@ -65,32 +69,35 @@ class SignUpViewModel: SignUpViewModelType {
         self.presentButtonViewModel = validObservable.map { SignUpScene.ButtonViewModel(backgroundColor: $0 ? .black : .gray) }
             .asDriver(onErrorDriveWith: .empty())
         
-        self.signUpButtonDidTap.subscribe { (event) in
-            
-        }.addDisposableTo(disposeBag)
+        let signUpSuccessObservable = Observable.combineLatest(emailObservable, userNameObservable, passwordObservable, validObservable, resultSelector: { (email, userName, password, valid) -> SignUp.Request in
+            return SignUp.Request(email: email, userName: userName, password: password)
+        })
         
         self.signedUp = signUpButtonDidTap
-            .withLatestFrom(validObservable)
-            .asDriver(onErrorDriveWith: .empty())
+                        .withLatestFrom(signUpSuccessObservable)
+                        .flatMapLatest({ (request) -> Observable<Void> in
+                            return SignUpRealmStore.shared.signUp(request)
+                        })
+                        .asDriver(onErrorDriveWith: .empty())
     }
 }
 
 extension String {
     var isEmail: Bool {
         get {
-            return true
+            return self.characters.count > 0
         }
     }
     
     var isUserName: Bool {
         get {
-            return true
+            return self.characters.count > 0
         }
     }
     
     var isPassword: Bool {
         get {
-            return true
+            return self.characters.count > 0
         }
     }
 }

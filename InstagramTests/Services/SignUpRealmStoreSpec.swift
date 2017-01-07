@@ -42,7 +42,7 @@ class SignUpRealmStoreSpec: QuickSpec {
             
             context("when signUp") {
                 beforeEach {
-                    sut.signUp(SignUp.Request.seed)
+                    _ = sut.signUp(SignUp.Request.seed).subscribe({ (event) in })
                 }
                 
                 it("numberOfUsers should be increased") {
@@ -51,7 +51,7 @@ class SignUpRealmStoreSpec: QuickSpec {
                 
                 context("when signUp using same Email") {
                     beforeEach {
-                        sut.signUp(SignUp.Request.seed)
+                        _ = sut.signUp(SignUp.Request.seed).subscribe({ (event) in })
                     }
                     
                     it("numberOfUsers should be not changed") {

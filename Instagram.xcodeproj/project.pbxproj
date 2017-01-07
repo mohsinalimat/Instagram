@@ -14,6 +14,7 @@
 		4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */; };
 		4C3A66CD1E0E99B000A9FE5A /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */; };
 		4C435F0D1E20FA6B00C8E085 /* ListFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435F0C1E20FA6B00C8E085 /* ListFeedsViewController.swift */; };
+		4C435F101E21020700C8E085 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435F0F1E21020700C8E085 /* SignUpViewControllerTests.swift */; };
 		4C49F9751E0FADF3001E3BBE /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9741E0FADF3001E3BBE /* UITestCase.swift */; };
 		4C49F9781E0FAE31001E3BBE /* SignUpSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */; };
 		4C49F97B1E0FAF0F001E3BBE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */; };
@@ -68,6 +69,7 @@
 		4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		4C3A66CE1E0E99B000A9FE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C435F0C1E20FA6B00C8E085 /* ListFeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListFeedsViewController.swift; path = Scenes/ListFeeds/ListFeedsViewController.swift; sourceTree = "<group>"; };
+		4C435F0F1E21020700C8E085 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewControllerTests.swift; path = Scenes/SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		4C49F9741E0FADF3001E3BBE /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpSceneTests.swift; path = Scenes/SignUpSceneTests.swift; sourceTree = "<group>"; };
 		4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Scenes/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		4C3A66C01E0E99B000A9FE5A /* InstagramTests */ = {
 			isa = PBXGroup;
 			children = (
+				4C435F0E1E2101E900C8E085 /* Scenes */,
 				4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */,
 				4CC7A7671E0EAAAB00D092FA /* Services */,
 				4C3A66C31E0E99B000A9FE5A /* Info.plist */,
@@ -182,6 +185,14 @@
 				4C3A66CE1E0E99B000A9FE5A /* Info.plist */,
 			);
 			path = InstagramUITests;
+			sourceTree = "<group>";
+		};
+		4C435F0E1E2101E900C8E085 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C435F0F1E21020700C8E085 /* SignUpViewControllerTests.swift */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		4C49F9761E0FAE14001E3BBE /* Scenes */ = {
@@ -463,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C435F101E21020700C8E085 /* SignUpViewControllerTests.swift in Sources */,
 				4CC7A7691E0EAAC100D092FA /* SignUpRealmStoreSpec.swift in Sources */,
 				4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */,
 			);

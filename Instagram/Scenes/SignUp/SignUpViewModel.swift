@@ -12,6 +12,8 @@ import RxCocoa
 import RxSwift
 
 struct SignUpScene {
+    static let identifier = "SignUpViewController"
+    
     struct ButtonViewModel {
         var backgroundColor: UIColor
     }
@@ -19,33 +21,42 @@ struct SignUpScene {
 
 protocol SignUpViewModelType {
     var signUpButtonDidTap: PublishSubject<Void> { get }
-    
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel> { get }
+    var signedUp: Driver<Bool> { get }
 }
 
 extension SignUpViewModel: SignUpViewControllerOutput {}
 
 class SignUpViewModel: SignUpViewModelType {
     
-    // Mark: Input
+    //MARK: Input
     let signUpButtonDidTap = PublishSubject<Void>()
     
+    //MARK: Output
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel>
+    
+    var signedUp: Driver<Bool>
     
     private let disposeBag = DisposeBag()
     
     init() {
         let emailValidation = Observable.from([true])
-        let passwordValidation = Observable.from([false])
+        let passwordValidation = Observable.from([true])
         let userNameValidation = Observable.from([true])
         
-        self.presentButtonViewModel = Observable.combineLatest(emailValidation, passwordValidation, userNameValidation) {
+        let validObservable = Observable.combineLatest(emailValidation, passwordValidation, userNameValidation) {
             return $0.0 && $0.1 && $0.2
-            }.map { SignUpScene.ButtonViewModel(backgroundColor: $0 ? .black : .gray) }
+            }.filter { $0 }
+        
+        self.presentButtonViewModel = validObservable.map { SignUpScene.ButtonViewModel(backgroundColor: $0 ? .black : .gray) }
             .asDriver(onErrorDriveWith: .empty())
         
         self.signUpButtonDidTap.subscribe { (event) in
-            print(event.element)
+            
         }.addDisposableTo(disposeBag)
+        
+        self.signedUp = signUpButtonDidTap
+            .withLatestFrom(validObservable)
+            .asDriver(onErrorDriveWith: .empty())
     }
 }

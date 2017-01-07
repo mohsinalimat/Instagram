@@ -14,7 +14,7 @@ class SignUpSceneTests: UITestCase {
         XCTAssertTrue(app.buttons["SignUpButton"].exists)
     }
     
-    func testSignUp() {
+    func testSignUpWhenTypingValidInfo() {
         let emailTextField = app.textFields["EmailTextField"]
         emailTextField.tap()
         emailTextField.typeText("cruzdiary@gmail.com")
@@ -29,5 +29,8 @@ class SignUpSceneTests: UITestCase {
         
         let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
+        
+        //then
+        XCTAssertTrue(app.collectionViews.element.exists)
     }
 }

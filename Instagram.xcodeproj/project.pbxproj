@@ -13,11 +13,13 @@
 		4C3A66B71E0E99B000A9FE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3A66B51E0E99B000A9FE5A /* LaunchScreen.storyboard */; };
 		4C3A66C21E0E99B000A9FE5A /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66C11E0E99B000A9FE5A /* InstagramTests.swift */; };
 		4C3A66CD1E0E99B000A9FE5A /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */; };
+		4C435F0D1E20FA6B00C8E085 /* ListFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435F0C1E20FA6B00C8E085 /* ListFeedsViewController.swift */; };
 		4C49F9751E0FADF3001E3BBE /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9741E0FADF3001E3BBE /* UITestCase.swift */; };
 		4C49F9781E0FAE31001E3BBE /* SignUpSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */; };
 		4C49F97B1E0FAF0F001E3BBE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */; };
 		4C49F9821E0FAF6A001E3BBE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */; };
 		4C49F9831E0FAF6A001E3BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49F9811E0FAF6A001E3BBE /* Main.storyboard */; };
+		4CAD06181E20F97200E1E056 /* ListFeeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAD06171E20F97200E1E056 /* ListFeeds.storyboard */; };
 		4CAF8ACA1E0FC13D00ABFE0D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8AC91E0FC13D00ABFE0D /* RxSwift.framework */; };
 		4CAF8ACC1E0FC14200ABFE0D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8ACB1E0FC14200ABFE0D /* RxCocoa.framework */; };
 		4CAF8ACE1E0FC14B00ABFE0D /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF8ACD1E0FC14B00ABFE0D /* SkyFloatingLabelTextField.framework */; };
@@ -65,11 +67,13 @@
 		4C3A66C81E0E99B000A9FE5A /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3A66CC1E0E99B000A9FE5A /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		4C3A66CE1E0E99B000A9FE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C435F0C1E20FA6B00C8E085 /* ListFeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListFeedsViewController.swift; path = Scenes/ListFeeds/ListFeedsViewController.swift; sourceTree = "<group>"; };
 		4C49F9741E0FADF3001E3BBE /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		4C49F9771E0FAE31001E3BBE /* SignUpSceneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpSceneTests.swift; path = Scenes/SignUpSceneTests.swift; sourceTree = "<group>"; };
 		4C49F97A1E0FAF0F001E3BBE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Scenes/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
 		4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = Storyboards/SignUp.storyboard; sourceTree = "<group>"; };
 		4C49F9811E0FAF6A001E3BBE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		4CAD06171E20F97200E1E056 /* ListFeeds.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ListFeeds.storyboard; path = Storyboards/ListFeeds.storyboard; sourceTree = "<group>"; };
 		4CAF8AC91E0FC13D00ABFE0D /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		4CAF8ACB1E0FC14200ABFE0D /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		4CAF8ACD1E0FC14B00ABFE0D /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyFloatingLabelTextField.framework; path = Carthage/Build/iOS/SkyFloatingLabelTextField.framework; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		4C49F9791E0FAEE0001E3BBE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CAD06161E20F95700E1E056 /* ListFeeds */,
 				4C49F97C1E0FAF12001E3BBE /* SignUp */,
 			);
 			name = Scenes;
@@ -210,8 +215,17 @@
 			children = (
 				4C49F9801E0FAF6A001E3BBE /* SignUp.storyboard */,
 				4C49F9811E0FAF6A001E3BBE /* Main.storyboard */,
+				4CAD06171E20F97200E1E056 /* ListFeeds.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4CAD06161E20F95700E1E056 /* ListFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				4C435F0C1E20FA6B00C8E085 /* ListFeedsViewController.swift */,
+			);
+			name = ListFeeds;
 			sourceTree = "<group>";
 		};
 		4CC7A7581E0EA6B700D092FA /* Frameworks */ = {
@@ -367,6 +381,7 @@
 			files = (
 				4C3A66B71E0E99B000A9FE5A /* LaunchScreen.storyboard in Resources */,
 				4C49F9831E0FAF6A001E3BBE /* Main.storyboard in Resources */,
+				4CAD06181E20F97200E1E056 /* ListFeeds.storyboard in Resources */,
 				4C3A66B41E0E99B000A9FE5A /* Assets.xcassets in Resources */,
 				4C49F9821E0FAF6A001E3BBE /* SignUp.storyboard in Resources */,
 			);
@@ -435,6 +450,7 @@
 			files = (
 				4C49F97B1E0FAF0F001E3BBE /* SignUpViewController.swift in Sources */,
 				4C3A66AF1E0E99B000A9FE5A /* ViewController.swift in Sources */,
+				4C435F0D1E20FA6B00C8E085 /* ListFeedsViewController.swift in Sources */,
 				4CC7A7661E0EA9F200D092FA /* SignUp.swift in Sources */,
 				4CC7A76B1E0EAE3000D092FA /* RealmUser.swift in Sources */,
 				4CC7A7631E0EA7EB00D092FA /* SignUpRealmStore.swift in Sources */,

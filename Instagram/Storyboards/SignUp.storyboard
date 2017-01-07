@@ -93,11 +93,20 @@
                         <outlet property="passwordTextField" destination="SGz-UL-8od" id="GpZ-AY-v6q"/>
                         <outlet property="signUpButton" destination="Lp2-LK-btg" id="3a2-Nu-ppK"/>
                         <outlet property="userNameTextField" destination="XkC-6B-J0a" id="dsS-21-l2M"/>
+                        <segue destination="Nh4-Df-8Aw" kind="presentation" identifier="ShowListFeedsScene" id="6bw-03-ifw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzA-vb-VbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="-478.11094452773619"/>
+        </scene>
+        <!--ListFeedsViewController-->
+        <scene sceneID="rOU-bR-u4b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListFeeds" referencedIdentifier="ListFeedsViewController" id="Nh4-Df-8Aw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvH-hN-RRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="-479"/>
         </scene>
     </scenes>
     <resources>

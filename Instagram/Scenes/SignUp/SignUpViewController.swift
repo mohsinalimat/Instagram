@@ -14,8 +14,8 @@ import RxSwift
 
 protocol SignUpViewControllerOutput {
     var signUpButtonDidTap: PublishSubject<Void> { get }
-    
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel> { get }
+    var signedIn: Driver<Bool> { get }
 }
 
 class SignUpViewController: UIViewController {
@@ -47,6 +47,13 @@ class SignUpViewController: UIViewController {
             .drive(onNext: { [weak self] viewModel in
             guard let `self` = self else { return }
             self.signUpButton.backgroundColor = viewModel.backgroundColor
+        }).addDisposableTo(disposeBag)
+        
+        viewModel.signedIn
+            .drive(onNext: { [weak self] signedIn in
+                guard let `self` = self else { return }
+                self.performSegue(withIdentifier: ListFeedsScene.segue, sender: nil)
+                
         }).addDisposableTo(disposeBag)
         // Do any additional setup after loading the view.
     }

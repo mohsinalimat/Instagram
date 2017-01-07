@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ListFeedsViewController: UIViewController {
+struct ListFeedsScene {
+    static let segue = "ShowListFeedsScene"
+}
 
+class ListFeedsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {

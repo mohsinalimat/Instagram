@@ -12,12 +12,6 @@ import SkyFloatingLabelTextField
 import RxCocoa
 import RxSwift
 
-protocol SignUpViewControllerOutput {
-    var signUpButtonDidTap: PublishSubject<Void> { get }
-    var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel> { get }
-    var signedUp: Driver<Bool> { get }
-}
-
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
@@ -26,7 +20,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
-    var viewModel: SignUpViewControllerOutput!
+    var viewModel: SignUpViewModelType!
     
     let disposeBag = DisposeBag()
     
@@ -45,6 +39,16 @@ class SignUpViewController: UIViewController {
         
         self.signUpButton.rx.tap
             .bindTo(viewModel.signUpButtonDidTap)
+            .addDisposableTo(disposeBag)
+        
+        self.emailTextField.rx.text.bindTo(viewModel.emailChanged).addDisposableTo(disposeBag)
+        
+        self.userNameTextField.rx.text
+            .bindTo(viewModel.userNameChanged)
+            .addDisposableTo(disposeBag)
+        
+        self.passwordTextField.rx.text
+            .bindTo(viewModel.passwordChanged)
             .addDisposableTo(disposeBag)
         
         viewModel.presentButtonViewModel

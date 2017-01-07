@@ -36,10 +36,10 @@ class SignUpViewControllerTests: QuickSpec {
         
         describe("SignUpViewController") {
             context("when signUpButtonDidTap") {
-                var outputSpy: SignUpViewControllerOutputSpy!
+                var outputSpy: SignUpViewModelTypeSpy!
                 
                 beforeEach {
-                    outputSpy = SignUpViewControllerOutputSpy()
+                    outputSpy = SignUpViewModelTypeSpy()
                     sut.viewModel = outputSpy
                     sut.signUpButton.sendActions(for: .touchUpInside)
                 }
@@ -52,14 +52,23 @@ class SignUpViewControllerTests: QuickSpec {
     }
 }
 
-class SignUpViewControllerOutputSpy: SignUpViewControllerOutput {
+class SignUpViewModelTypeSpy: SignUpViewModelType {
+    var emailChanged: Variable<String?>
+    var userNameChanged: Variable<String?>
+    var passwordChanged: Variable<String?>
+    
     var signUpButtonDidTap: PublishSubject<Void> = PublishSubject<Void>()
+    
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel>
     var signedUp: Driver<Bool>
     
     var isSignedUpDidTap: Bool = false
     
     init() {
+        self.emailChanged = Variable("")
+        self.userNameChanged = Variable("")
+        self.passwordChanged = Variable("")
+        
         self.presentButtonViewModel = Observable
             .from([SignUpScene.ButtonViewModel(backgroundColor: .black)])
             .asDriver(onErrorDriveWith: .empty())

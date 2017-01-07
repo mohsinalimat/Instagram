@@ -10,6 +10,7 @@ import UIKit
 
 import RxCocoa
 import RxSwift
+import RxOptional
 
 struct SignUpScene {
     static let identifier = "SignUpViewController"
@@ -20,14 +21,23 @@ struct SignUpScene {
 }
 
 protocol SignUpViewModelType {
+    var emailChanged: Variable<String?> { get }
+    var userNameChanged: Variable<String?> { get }
+    var passwordChanged: Variable<String?> { get }
+    
+    //INPUT
     var signUpButtonDidTap: PublishSubject<Void> { get }
+    
+    //OUTPUT
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel> { get }
     var signedUp: Driver<Bool> { get }
 }
 
-extension SignUpViewModel: SignUpViewControllerOutput {}
-
 class SignUpViewModel: SignUpViewModelType {
+    
+    let emailChanged: Variable<String?>
+    let userNameChanged: Variable<String?>
+    let passwordChanged: Variable<String?>
     
     //MARK: Input
     let signUpButtonDidTap = PublishSubject<Void>()
@@ -40,9 +50,13 @@ class SignUpViewModel: SignUpViewModelType {
     private let disposeBag = DisposeBag()
     
     init() {
-        let emailValidation = Observable.from([true])
-        let passwordValidation = Observable.from([true])
-        let userNameValidation = Observable.from([true])
+        self.emailChanged = Variable("")
+        self.userNameChanged = Variable("")
+        self.passwordChanged = Variable("")
+        
+        let emailValidation = emailChanged.asDriver().filterNil().map { $0.isEmail }.asObservable()
+        let userNameValidation = userNameChanged.asDriver().filterNil().map { $0.isUserName }.asObservable()
+        let passwordValidation = passwordChanged.asDriver().filterNil().map { $0.isPassword }.asObservable()
         
         let validObservable = Observable.combineLatest(emailValidation, passwordValidation, userNameValidation) {
             return $0.0 && $0.1 && $0.2
@@ -58,5 +72,25 @@ class SignUpViewModel: SignUpViewModelType {
         self.signedUp = signUpButtonDidTap
             .withLatestFrom(validObservable)
             .asDriver(onErrorDriveWith: .empty())
+    }
+}
+
+extension String {
+    var isEmail: Bool {
+        get {
+            return true
+        }
+    }
+    
+    var isUserName: Bool {
+        get {
+            return true
+        }
+    }
+    
+    var isPassword: Bool {
+        get {
+            return true
+        }
     }
 }

@@ -17,7 +17,7 @@ class SignUpSceneTests: UITestCase {
     func testSignUpWhenTypingValidInfo() {
         let emailTextField = app.textFields["EmailTextField"]
         emailTextField.tap()
-        emailTextField.typeText("cruzdiary@gmail.com")
+        emailTextField.typeText("cruz@gmail.com")
         
         let userNameField = app.textFields["UserNameTextField"]
         userNameField.tap()

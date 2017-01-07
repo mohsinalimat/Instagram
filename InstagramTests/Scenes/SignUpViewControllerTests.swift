@@ -60,7 +60,7 @@ class SignUpViewModelTypeSpy: SignUpViewModelType {
     var signUpButtonDidTap: PublishSubject<Void> = PublishSubject<Void>()
     
     var presentButtonViewModel: Driver<SignUpScene.ButtonViewModel>
-    var signedUp: Driver<Bool>
+    var signedUp: Driver<Void>
     
     var isSignedUpDidTap: Bool = false
     
@@ -74,7 +74,7 @@ class SignUpViewModelTypeSpy: SignUpViewModelType {
             .asDriver(onErrorDriveWith: .empty())
         
         self.signedUp = Observable
-            .from([false])
+            .from([()])
             .asDriver(onErrorDriveWith: .empty())
         
         signUpButtonDidTap.subscribe { (event) in

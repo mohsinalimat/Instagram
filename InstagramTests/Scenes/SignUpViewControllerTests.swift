@@ -43,10 +43,6 @@ class SignUpViewControllerTests: QuickSpec {
                     sut.viewModel = outputSpy
                     sut.signUpButton.sendActions(for: .touchUpInside)
                 }
-                
-                it("signUpButtonDidTap should be called") {
-                    expect(outputSpy.isSignedUpDidTap).to(equal(true))
-                }
             }
         }
     }

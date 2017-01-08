@@ -158,8 +158,8 @@
 			children = (
 				4C3A66AB1E0E99B000A9FE5A /* Instagram */,
 				4C3A66C01E0E99B000A9FE5A /* InstagramTests */,
-				4C3A66CB1E0E99B000A9FE5A /* InstagramUITests */,
 				4C435F161E2223DF00C8E085 /* InstagramKIFTests */,
+				4C3A66CB1E0E99B000A9FE5A /* InstagramUITests */,
 				4C3A66AA1E0E99B000A9FE5A /* Products */,
 				4CC7A7581E0EA6B700D092FA /* Frameworks */,
 			);
